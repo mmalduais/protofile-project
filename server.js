@@ -3,7 +3,8 @@ const express= require ('express');
 app.set('view engine','ejs')
 // app.set('views','application_views');
 app.use(express.static(__dirname + '/public'));
- app.listen('3000');
+const port = process.env.PORT || 3000;
+ app.listen(port);
 
 //  app.use(express.static('application_views/css')); 
  console.log("server started")
